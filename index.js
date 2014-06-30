@@ -122,7 +122,44 @@ function BFS(tree) {
     return list;
 }
 
+function BFSStratified(tree) {
+    var list = [];
+    (function traverse(trees) {
+        var subTrees = [],
+            level = [];
+        trees.forEach(function (tree) {
+            level.push(tree.id);
+            if (tree.children) {
+                subTrees = subTrees.concat(tree.children);
+            }
+        });
+        list.push(level);
+        subTrees.length && traverse(subTrees);
+    })([tree]);
+
+    return list;
+}
+
+function paths(tree) {
+    var paths = [];
+
+    (function traverse(subTree, basePath) {
+        basePath.push(subTree.id);
+
+        if (subTree.children) {
+            subTree.children.forEach(function (node) {
+                traverse(node, basePath.concat());
+            });
+        } else {
+            paths.push(basePath);
+        }
+    })(tree, []);
+
+    return paths;
+}
 
 console.log(DFSPreOrder(treeData).join(','));
 console.log(DFSPostOrder(treeData).join(','));
 console.log(BFS(treeData).join(','));
+console.log(BFSStratified(treeData));
+console.log(paths(treeData));
