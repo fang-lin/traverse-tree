@@ -55,6 +55,9 @@ var treeData = {
                         },
                         {
                             id: '3-7'
+                        },
+                        {
+                            id: '3-8'
                         }
                     ]
                 }
@@ -71,6 +74,15 @@ var treeData = {
                 },
                 {
                     id: '2-6'
+                },
+                {
+                    id: '2-7'
+                },
+                {
+                    id: '2-8'
+                },
+                {
+                    id: '2-9'
                 }
             ]
         }
@@ -158,8 +170,21 @@ function paths(tree) {
     return paths;
 }
 
+console.log('DFSPreOrder:');
 console.log(DFSPreOrder(treeData).join(','));
+
+console.log('---------------------------------------------------------------------------------');
+console.log('DFSPostOrder:');
 console.log(DFSPostOrder(treeData).join(','));
+
+console.log('---------------------------------------------------------------------------------');
+console.log('BFS:');
 console.log(BFS(treeData).join(','));
+
+console.log('---------------------------------------------------------------------------------');
+console.log('BFSStratified:');
 console.log(BFSStratified(treeData));
+
+console.log('---------------------------------------------------------------------------------');
+console.log('paths:');
 console.log(paths(treeData));
