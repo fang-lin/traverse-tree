@@ -5,88 +5,28 @@
 
 var treeData = {
     id: '0-0',
-    children: [
-        {
-            id: '1-0',
-            children: [
-                {
-                    id: '2-0',
-                    children: [
-                        {
-                            id: '3-0'
-                        },
-                        {
-                            id: '3-1'
-                        }
-                    ]
-                },
-                {
-                    id: '2-1',
-                    children: [
-                        {
-                            id: '3-2'
-                        },
-                        {
-                            id: '3-3'
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            id: '1-1',
-            children: [
-                {
-                    id: '2-2',
-                    children: [
-                        {
-                            id: '3-4'
-                        },
-                        {
-                            id: '3-5'
-                        }
-                    ]
-                },
-                {
-                    id: '2-3',
-                    children: [
-                        {
-                            id: '3-6'
-                        },
-                        {
-                            id: '3-7'
-                        },
-                        {
-                            id: '3-8'
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            id: '1-2',
-            children: [
-                {
-                    id: '2-4'
-                },
-                {
-                    id: '2-5'
-                },
-                {
-                    id: '2-6'
-                },
-                {
-                    id: '2-7'
-                },
-                {
-                    id: '2-8'
-                },
-                {
-                    id: '2-9'
-                }
-            ]
-        }
-    ]
+    children: [{
+        id: '1-0',
+        children: [{
+            id: '2-0',
+            children: [ { id: '3-0' }, { id: '3-1' } ]
+        }, {
+            id: '2-1',
+            children: [ { id: '3-2' }, { id: '3-3' } ]
+        }]
+    }, {
+        id: '1-1',
+        children: [{
+            id: '2-2',
+            children: [ { id: '3-4' }, { id: '3-5' } ]
+        }, {
+            id: '2-3',
+            children: [ { id: '3-6' }, { id: '3-7' }, { id: '3-8' } ]
+        }]
+    }, {
+        id: '1-2',
+        children: [ { id: '2-4' }, { id: '2-5' }, { id: '2-6' }, { id: '2-7' }, { id: '2-8' }, { id: '2-9' } ]
+    }]
 };
 
 function DFSPreOrder(tree) {
